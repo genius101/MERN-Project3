@@ -28,3 +28,20 @@ a) Install Node.js on the server by running the following configurations:
 - [ ]	Verify the node installation with the command below:
 - [x]	node -v
 - [x]	npm -v
+
+
+b) Application Code Setup:
+
+- [ ]	Create a new directory for your To-Do project:
+- [x]	mkdir Todo
+
+- [x]	Run the command ls to verify that Todo directory has been created
+	
+- [ ]	Switch into Todo Directory with the command:
+- [x]	cd Todo
+
+- [ ]	Next, you will use the command npm init to initialise your project, so that a new file named package.json will be created:
+- [x]	npm init
+	(You would need to press enter several times to accept the default values and proceed)
+
+- [x]	Run the command ls to confirm that package.json is present
