@@ -13,15 +13,18 @@ Step 1 - Backend configuration
 a) Install Node.js on the server by running the following configurations:
 	
 - [x]	Update Ubuntu:
-		- [ ]  sudo apt update
+- [ ]	sudo apt update
 
-	ii)	Upgrade Ubuntu:
-		sudo apt upgrade
-	iii)	Lets get the location of Node.js software from Ubuntu repositories:
-		curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-	iv)	Install node.js with the following command:
-		sudo apt-get install -y node.js 
-		(The command above installs both nodejs and npm. NPM is a package manager for Node like apt for Ubuntu)
-	v)	Verify the node installation with the command below:
-		node -v
-		npm -v
+- [x]	Upgrade Ubuntu:
+- [ ]	sudo apt upgrade
+
+- [x]	Lets get the location of Node.js software from Ubuntu repositories:
+- [ ]	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+- [x]	Install node.js with the following command:
+- [ ]	sudo apt-get install -y node.js 
+	(The command above installs both nodejs and npm. NPM is a package manager for Node like apt for Ubuntu)
+	
+- [x]	Verify the node installation with the command below:
+- [ ]	node -v
+- [ ]	npm -v
