@@ -703,4 +703,4 @@ Assuming no errors when saving all these files, our To-Do app should be ready an
 
 - [x]	In this Project MERN we have created a simple To-Do and deployed it to MERN stack.
 - [x]	We wrote a frontend application using React.js that communicates with a backend application written using Expressjs.
-- [x]	You also created a Mongodb backend for storing tasks in a database.
+- [x]	We also created a Mongodb backend for storing tasks in a database.
