@@ -439,3 +439,268 @@ c) Creating your React Components
 		export default Input
 
 - [ ]	Save and Exit
+
+d) Make use of Axios, which is a Promise based HTTP client for the browser and node.js
+
+- [ ]	Move to the src folder:
+- [x]	cd ..
+	
+- [ ]	Move to clients folder:
+- [x]	cd ..
+	
+- [ ]	Install Axios:	
+- [x]	npm install axios
+	
+- [ ]	Go to ‘components’ directory:
+- [x]	cd src/components
+
+- [ ]	After that open your ListTodo.js file and insert the following code:
+
+		import React from 'react';
+
+		const ListTodo = ({ todos, deleteTodo }) => {
+
+		return (
+		<ul>
+		{
+		todos &&
+		todos.length > 0 ?
+		(
+		todos.map(todo => {
+		return (
+		<li key={todo._id} onClick={() => deleteTodo(todo._id)}>{todo.action}</li>
+		)
+		})
+		)
+		:
+		(
+		<li>No todo(s) left</li>
+		)
+		}
+		</ul>
+		)
+		}
+
+		export default ListTodo
+
+- [ ]	Save and Exit
+		
+- [ ]	Then in your Todo.js file, write the following code:
+
+		import React, {Component} from 'react';
+		import axios from 'axios';
+
+		import Input from './Input';
+		import ListTodo from './ListTodo';
+
+		class Todo extends Component {
+
+		state = {
+		todos: []
+		}
+
+		componentDidMount(){
+		this.getTodos();
+		}
+
+		getTodos = () => {
+		axios.get('/api/todos')
+		.then(res => {
+		if(res.data){
+		this.setState({
+		todos: res.data
+		})
+		}
+		})
+		.catch(err => console.log(err))
+		}
+
+		deleteTodo = (id) => {
+
+		    axios.delete(`/api/todos/${id}`)
+		      .then(res => {
+			if(res.data){
+			  this.getTodos()
+			}
+		      })
+		      .catch(err => console.log(err))
+
+		}
+
+		render() {
+		let { todos } = this.state;
+
+		    return(
+		      <div>
+			<h1>My Todo(s)</h1>
+			<Input getTodos={this.getTodos}/>
+			<ListTodo todos={todos} deleteTodo={this.deleteTodo}/>
+		      </div>
+		    )
+
+		}
+		}
+
+		export default Todo;
+		
+- [ ]	Save and Exit
+
+- [ ]	We need to make little adjustment to our react code, delete the logo and adjust our App.js file. 
+- [ ]	Move to the src folder:
+- [x]	cd ..
+
+
+- [ ]	Make sure that you are in the src folder and open App.js
+
+- [ ]	Copy and paste the code below into it:
+
+		import React from 'react';
+
+		import Todo from './components/Todo';
+		import './App.css';
+
+		const App = () => {
+		return (
+		<div className="App">
+		<Todo />
+		</div>
+		);
+		}
+
+		export default App;
+		
+- [ ]	Save and exit from the editor
+
+- [ ]	In the src directory open the App.css
+- [ ]	then paste the following code into App.css:
+
+		.App {
+		text-align: center;
+		font-size: calc(10px + 2vmin);
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+		input {
+		height: 40px;
+		width: 50%;
+		border: none;
+		border-bottom: 2px #101113 solid;
+		background: none;
+		font-size: 1.5rem;
+		color: #787a80;
+		}
+
+		input:focus {
+		outline: none;
+		}
+
+		button {
+		width: 25%;
+		height: 45px;
+		border: none;
+		margin-left: 10px;
+		font-size: 25px;
+		background: #101113;
+		border-radius: 5px;
+		color: #787a80;
+		cursor: pointer;
+		}
+
+		button:focus {
+		outline: none;
+		}
+
+		ul {
+		list-style: none;
+		text-align: left;
+		padding: 15px;
+		background: #171a1f;
+		border-radius: 5px;
+		}
+
+		li {
+		padding: 15px;
+		font-size: 1.5rem;
+		margin-bottom: 15px;
+		background: #282c34;
+		border-radius: 5px;
+		overflow-wrap: break-word;
+		cursor: pointer;
+		}
+
+		@media only screen and (min-width: 300px) {
+		.App {
+		width: 80%;
+		}
+
+		input {
+		width: 100%
+		}
+
+		button {
+		width: 100%;
+		margin-top: 15px;
+		margin-left: 0;
+		}
+		}
+
+		@media only screen and (min-width: 640px) {
+		.App {
+		width: 60%;
+		}
+
+		input {
+		width: 50%;
+		}
+
+		button {
+		width: 30%;
+		margin-left: 10px;
+		margin-top: 0;
+		}
+		}
+		
+- [ ]	Save and exit the Editor
+
+- [ ]	In the src directory open the index.css and
+- [ ]	copy the code below:
+
+		body {
+		margin: 0;
+		padding: 0;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		box-sizing: border-box;
+		background-color: #282c34;
+		color: #787a80;
+		}
+
+		code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+		}
+		
+- [ ]	Save and Exit the Editor
+
+- [ ]	Go to the Todo directory
+
+- [ ]	When you are in the Todo directory run:
+- [x]	npm run dev
+
+
+Assuming no errors when saving all these files, our To-Do app should be ready and fully functional with the functionality discussed earlier: 
+- [ ]	creating a task, 
+- [ ]	deleting a task and
+- [ ]	viewing all your tasks.
+
+![2 d xiii](https://user-images.githubusercontent.com/10243139/117583550-9b162180-b0ff-11eb-8874-c98199cbc7b2.jpg)
+
+
+- [x]	In this Project MERN we have created a simple To-Do and deployed it to MERN stack.
+- [x]	We wrote a frontend application using React.js that communicates with a backend application written using Expressjs.
+- [x]	You also created a Mongodb backend for storing tasks in a database.
