@@ -308,7 +308,7 @@ f) MongoDB Database
 ![1 f xi](https://user-images.githubusercontent.com/10243139/117581585-7b79fb80-b0f5-11eb-9cc6-92bcae56868f.jpg)
 
 - [ ]	So to kill this process use the command:
-- [x]	kill -9 <process-id>
+- [x]	kill -9 process-id
 
 - [x]	And run the node index.js command again, this time you shall see a message ‘Database connected successfully’
 
@@ -319,22 +319,28 @@ g) Testing Backend Code without Frontend using RESTful API
 
 - [ ]	Download and install postman on your laptop using this link https://www.getpostman.com/downloads/
 	
-- [ ]	Now open your Postman, create a POST request to the API http://<PublicIP>:5000/api/todos ( make sure your set header key Content-Type as application/json )
+- [ ]	Now open your Postman, create a POST request to the API http://PublicIP:5000/api/todos ( make sure your set header key Content-Type as application/json )
 
-- [ ]	Edit the body and send with POST
+- [ ]	Edit the body and send
+
+![post-request](https://user-images.githubusercontent.com/10243139/117633852-55487000-b176-11eb-9ae4-f7ec66c6fd3f.jpg)
+
 
 ![1 g iii](https://user-images.githubusercontent.com/10243139/117581684-15da3f00-b0f6-11eb-98b4-20857515219f.jpg)
 
-- [ ]	Receive with GET and click send
+- [ ]	create a GET request to the API http://PublicIP:5000/api/todos (make sure your set header key Content-Type as application/json)
+- [ ]	click send
 
 ![1 g iv](https://user-images.githubusercontent.com/10243139/117581704-2b4f6900-b0f6-11eb-9ded-f53f5346ebcd.jpg)
 
+- [ ]	This will receive the input from the POST request
 
 Step 2 - Frontend creation
 
 a) Running a React App
 
-- [ ]	To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app. Run the command in the Todo Directory:
+- [ ]	To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app. 
+- [ ]	Run the command below in the Todo Directory:
 - [x]	npx create-react-app client
 - [ ]	(This will create a client folder inside the Todo folder)
 
@@ -343,7 +349,8 @@ a) Running a React App
 - [ ]	Install concurrently, it is used to run more than one command simultaneously from the same terminal window
 - [x]	npm install concurrently --save-dev
 
-- [ ]	Install nodemon, it is used to run and monitor the server. If there is any change in the server code, nodemon will restart it automatically and load the new changes:
+- [ ]	We need to install nodemon, as it is used to run and monitor the server. 
+- [ ]	If there is any change in the server code, nodemon will restart it automatically and load the new changes:
 - [x]	npm install nodemon --save-dev
 
 ![2 a iii](https://user-images.githubusercontent.com/10243139/117581844-dcee9a00-b0f6-11eb-8ad5-04e0ef1992a8.jpg)
@@ -358,22 +365,24 @@ a) Running a React App
 		
 b) Configure Proxy in package.json
 
-- [ ]	Change directory to ‘client’:
+- [ ]	Change directory to client by using the command:
 - [x]	cd client
 	
-- [ ]	Open the package.json file and add the key value pair in the package.json file "proxy": "http://localhost:5000"
+- [ ]	We need to open the package.json file and add a key value pair in the package.json file
 - [x]	nano package.json
 
-- [ ] Add the key value pair in the package.json file:
+- [ ] Add this key value pair in the package.json file:
 - [x] "proxy": "http://localhost:5000"
 - [ ] (This can be added to any part of the file)
+- [ ] Save and Exit
 
-- [ ]	Now, ensure you are inside the Todo directory, and simply do:
+- [ ]	Now, make sure you are inside the Todo directory, and simply run the command below:
 - [x]	npm run dev
+- [ ]	You show have the same result as the image below if everything goes well
 
 ![2 b iii](https://user-images.githubusercontent.com/10243139/117582022-f217f880-b0f7-11eb-8d2d-f4cc0365cb06.jpg)
 
-- [ ]	Your app should open and start running on http://<PUBLIC-IP>:3000 
+- [ ]	Your app should open and start running on http://PUBLIC-IP:3000 
 
 ![2 b iv](https://user-images.githubusercontent.com/10243139/117582065-2095d380-b0f8-11eb-8e2a-6686c1b7b245.jpg)
 
@@ -449,8 +458,9 @@ c) Creating your React Components
 
 - [ ]	Save and Exit
 
-d) Make use of Axios, which is a Promise based HTTP client for the browser and node.js
+d) We need to install Axios, which is a Promise based HTTP client for the browser and node.js
 
+- [ ]	Follow the steps below to install Axios and continue with the setup
 - [ ]	Move to the src folder:
 - [x]	cd ..
 	
@@ -697,8 +707,9 @@ d) Make use of Axios, which is a Promise based HTTP client for the browser and n
 - [ ]	Save and Exit the Editor
 
 - [ ]	Go to the Todo directory
+- [x]	cd ../..
 
-- [ ]	When you are in the Todo directory run:
+- [ ]	When you are in the Todo directory, run the command below:
 - [x]	npm run dev
 
 
