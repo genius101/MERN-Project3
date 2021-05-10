@@ -162,7 +162,6 @@ e) Models
 - [ ]	Inside the models folder, create a file and name it todo.js with this command:
 - [x]	touch todo.js
 
-![1 e](https://user-images.githubusercontent.com/10243139/117580888-fe00bc00-b0f1-11eb-8e78-4f3f2256595d.jpg)
 
 - [ ]	Open the file created with nano todo.js then paste the code below in the file:
 
@@ -221,6 +220,8 @@ e) Models
 		module.exports = router;
 
 - [ ]	Save and Exit
+
+![1 e](https://user-images.githubusercontent.com/10243139/117580888-fe00bc00-b0f1-11eb-8e78-4f3f2256595d.jpg)
 
 f) MongoDB Database
 
