@@ -104,6 +104,8 @@ c) Install ExpressJS:
 ![1 c vii](https://user-images.githubusercontent.com/10243139/117580527-3bfce080-b0f0-11eb-8578-3b0abc917287.jpg)
 
 - [ ]	We need to create an inbound rule to open port 5000 from the EC2 security group settings
+
+![Port_5000 inbound rule](https://user-images.githubusercontent.com/10243139/117627622-43fc6500-b170-11eb-954d-0ae2eae05628.png)
 	
 - [ ]	Open up your browser and try to access your server’s Public IP followed by port 5000:
 - [x]	http://<PublicIP>:5000
