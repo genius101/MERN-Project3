@@ -108,7 +108,7 @@ c) Install ExpressJS:
 ![Port_5000 inbound rule](https://user-images.githubusercontent.com/10243139/117627622-43fc6500-b170-11eb-954d-0ae2eae05628.png)
 	
 - [ ]	Open up your browser and try to access your server’s Public IP followed by port 5000:
-- [x]	http://<PublicIP>:5000
+- [x]	http://PublicIP:5000
 
 ![1 c ix](https://user-images.githubusercontent.com/10243139/117580609-a57cef00-b0f0-11eb-938b-b69d0e70a3d2.jpg)
 
