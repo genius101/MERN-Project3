@@ -229,7 +229,9 @@ f) MongoDB Database
 	
 - [ ]	After signup, Click on Build a Cluster and create a shared cluster which is free and ideal for our test environment
 	
-- [ ]	Choose your cloud provider which is AWS in this instance and choose a region closest to you, in this case I choose us-east-1 and proceed to create the cluster
+- [ ]	Choose your cloud provider which is AWS in this instance and choose a region closest to you
+- [ ]	 In this case, I choose us-east-1
+- [ ]	 Proceed to create the cluster
 
 
 ![1 f iii](https://user-images.githubusercontent.com/10243139/117581227-b54a0280-b0f3-11eb-97b7-a57d4da886e8.jpg)
@@ -238,19 +240,23 @@ f) MongoDB Database
 
 - [ ]	Add a username and password, leave other setting as default and click on Add User
 
-- [ ]	Next is to click on Network Access from the dashboard, followed by add ip address. Select allow access from anywhere and change the entry to 1 week instead of 6 hours, then click on confirm.
-- [ ]	 Although this is not the best practice but it is okay for a test scenario.
+- [ ]	Next is to click on Network Access from the dashboard, followed by add ip address. 
+- [ ]	Select allow access from anywhere and change the entry to 1 week instead of 6 hours, then click on confirm.
+- [ ]	Although this is not the best practice but it is okay for a test scenario.
 
-- [ ]	Next on the Dashboard is clusters then click on Collections. Click on add my own data, add a database name and collection name and click on create
-	
+- [ ]	Next on the Dashboard click on clusters then click on Collections. 
+- [ ]	Click on add my own data, add a database name and collection name and click on create
+
+
+- [ ]	Lets get back to our Linux Terminal	
 - [ ]	Create a file in your Todo directory and name it .env:
 - [x]	touch .env
 
 - [ ]	Add the connection string to access the database in it, just as below:
 - [x]	nano .env 
 - [ ]	( then input below into the file )
-- [x]	DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
-- [ ]	(Ensure to update <username>, <password>, <network-address> and <database> according to your setup)
+- [x]	DB = 'mongodb+srv://username:password@network-address/dbname?retryWrites=true&w=majority'
+- [ ]	(Ensure to update username, password, network-address and database according to your setup)
 
 - [ ]	Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database.
 - [ ]	Simply delete existing content in the file, and update it with the entire code below:
